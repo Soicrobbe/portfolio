@@ -110,14 +110,34 @@ button:hover {
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
+    display:grid;
+    grid: auto / auto auto;
+    background-color: #A3EBB1;
+    color: black;
+    padding: 10px;
     text-align: center;
     position: fixed;
     bottom: 0;
     width: 100%;
 }
+
+#footer-list {
+    display:flex;
+    flex-direction: row-reverse;
+    /* float: right; */
+    /* text-align: right; */
+    /* justify-content: space-between; */
+}
+
+#footer-list li {
+    margin: 0 10px;
+}
+
+footer div {
+    display: inline;
+    text-align: left;
+}
+
 
 /* Mobile navigation */
 
@@ -222,5 +242,8 @@ footer {
     }
     header {
         padding: 0;
+    }
+    .footer-text {
+        display:none
     }
 }
