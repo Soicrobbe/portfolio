@@ -138,6 +138,11 @@ footer div {
     text-align: left;
 }
 
+footer ul li a {
+    text-decoration: underline;
+    color: inherit;
+    text-underline-offset: 2px;;
+}
 
 /* Mobile navigation */
 
