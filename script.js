@@ -19,7 +19,5 @@ function toggleBurger() {
         icon.innerHTML = "&#x2716;";
     } else {
         icon.innerHTML = "&#9776;"
-    }
-    
-    
+    }    
 }
