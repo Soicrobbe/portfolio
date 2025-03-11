@@ -49,9 +49,13 @@ ul {
 
 section {
   padding: 60px 20px;
-  margin: auto;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: 150px;
   max-width: 75%;
   text-align: center;
+  min-height: 500px;
 }
 
 header {
