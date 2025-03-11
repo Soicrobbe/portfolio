@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
-  --bg-color: #f2f2f2;
+  --bg-color: #eceef1;
   --shadow-dark: #97a4b6;
   --shadow-light: #ffffff;
-  --text-primary: #3a3e42;
+  --text-primary: #2f3235;
   --transition-config: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 1.1);
+  --bright-green: #a3ebb1;
+  --deep-blue: #274472;
 }
 
 * {
@@ -14,7 +16,8 @@
 }
 
 h1 {
-  margin: 30px;
+  margin-top: 55px;
+  margin-bottom: 55px;
   font-size: 50px;
 }
 
@@ -47,19 +50,24 @@ ul {
 section {
   padding: 60px 20px;
   margin: auto;
-  max-width: 90%;
+  max-width: 75%;
   text-align: center;
 }
 
 header {
-  background-color: #274472;
+  background-color: #eceef1;
   color: #fff;
-  padding: 15px 0;
+  padding: 30px 0;
   position: fixed;
   width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1000;
+  margin: auto;
+  transition: all 0.3s ease-in-out;
+}
+
+header.shadow {
+  padding: 15px 0;
+  border: 1px solid rgba(151, 164, 182, 0.2392156863);
+  box-shadow: 6px 6px 6px rgba(206, 206, 206, 0.5137254902), -6px -6px 6px #ffffff;
 }
 
 header nav ul {
@@ -69,42 +77,16 @@ header nav ul {
 }
 
 header nav ul li a {
-  color: #fff;
+  color: black;
   font-size: 18px;
 }
 
 header nav ul li a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 h1, h2, h3 {
   color: #333;
-}
-
-#project-container {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 30px;
-}
-
-#projects {
-  width: 100;
-}
-
-.project {
-  flex: 1;
-  background-color: var(--bg-color);
-  padding: 20px;
-  width: 100%;
-  margin-top: 10px;
-  margin-bottom: 0px;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 20px;
-  box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15), -7px -7px 20px rgb(255, 255, 255), 0px 0px 4px rgba(255, 255, 255, 0.2) !important;
 }
 
 form {
@@ -133,11 +115,10 @@ button {
 footer {
   display: grid;
   grid: auto/auto auto;
-  background-color: #A3EBB1;
+  background-color: var(--bg-color);
   color: black;
   padding: 10px;
   text-align: center;
-  position: fixed;
   bottom: 0;
   width: 100%;
 }
@@ -145,9 +126,6 @@ footer {
 #footer-list {
   display: flex;
   flex-direction: row-reverse;
-  /* float: right; */
-  /* text-align: right; */
-  /* justify-content: space-between; */
 }
 
 #footer-list li {
@@ -160,13 +138,17 @@ footer div {
 }
 
 footer ul li a {
-  /* text-decoration: underline; */
   color: inherit;
   text-underline-offset: 3px;
 }
 
 footer ul li a:hover {
   color: green;
+}
+
+#desktop-nav {
+  display: flex;
+  justify-content: center;
 }
 
 /* Mobile navigation */
@@ -219,33 +201,133 @@ footer ul li a:hover {
   background-color: var(--bg-color);
   border-radius: 20px;
   margin-bottom: 20px;
+  width: 100%;
+  height: auto;
+}
+
+#intro-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10%;
+}
+
+#intro-left {
+  flex: 1;
+}
+
+#intro-right {
+  flex: 1;
+  float: right;
+  text-align: right;
+}
+
+#robbeimg {
+  border-radius: 50%;
+  max-width: 85%;
+  height: auto;
+}
+
+#project-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 50px;
+}
+
+#projects {
+  width: 100;
+}
+
+.project {
+  flex: 1;
+  background-color: var(--bg-color);
+  padding: 20px;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15), -7px -7px 20px rgb(255, 255, 255), 0px 0px 4px rgba(255, 255, 255, 0.2) !important;
+}
+
+.project:hover {
+  box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15), -7px -7px 20px rgb(255, 255, 255), inset 0px 0px 4px rgba(255, 255, 255, 0.699), inset 7px 7px 15px rgba(255, 0, 0, 0), inset -7px -7px 20px rgba(255, 255, 255, 0), 0px 0px 4px rgba(255, 255, 255, 0) !important;
+}
+
+#resume-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.resume-entry {
+  flex: 1;
+  background-color: var(--bg-color);
+  padding: 20px;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15), -7px -7px 20px rgb(255, 255, 255), 0px 0px 4px rgba(255, 255, 255, 0.2) !important;
 }
 
 .button {
-  font-size: 20px;
+  font-size: 17px;
   padding: 10px 40px;
   border-radius: 15px;
   color: #6D7587;
   background-color: var(--bg-color);
-  outline-style: solid;
-  outline-color: rgba(55, 84, 170, 0.041);
+  outline: solid 1px rgba(55, 84, 170, 0.068);
   transition: box-shadow 0.2s ease !important;
+  max-width: 50%;
+  box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15), -7px -7px 20px rgb(255, 255, 255), inset 0px 0px 4px rgba(255, 255, 255, 0.2), inset 7px 7px 15px rgba(55, 84, 170, 0), inset -7px -7px 20px rgba(255, 255, 255, 0), 0px 0px 4px rgba(255, 255, 255, 0) !important;
+}
+
+.button.header {
+  transition: padding 0.3s ease-out, font-size 0.3s ease-out !important;
+  font-size: 17px;
+}
+
+.button.header.shadow {
+  padding: 7px 30px;
+  font-size: 15px;
 }
 
 .button:hover {
   outline: none;
   box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15), -7px -7px 20px rgb(255, 255, 255), inset 0px 0px 4px rgba(255, 255, 255, 0.2), inset 7px 7px 15px rgba(55, 84, 170, 0), inset -7px -7px 20px rgba(255, 255, 255, 0), 0px 0px 4px rgba(255, 255, 255, 0) !important;
+  color: rgb(119, 167, 255);
 }
 
 .button:active {
   box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15), -7px -7px 20px rgb(255, 255, 255), inset 0px 0px 4px rgba(255, 255, 255, 0), inset 7px 7px 15px rgba(55, 84, 170, 0.15), inset -7px -7px 20px rgb(255, 255, 255), 0px 0px 4px rgba(255, 255, 255, 0.2) !important;
 }
 
+.button:focus {
+  outline: solid 2px rgba(55, 84, 170, 0.068);
+}
+
 .button-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: row;
-  gap: 30px;
+  gap: 25px;
+}
+
+#contact-button {
+  display: grid;
+  position: fixed;
+  bottom: 10px;
 }
 
 @media screen and (max-width: 800px) {
@@ -269,5 +351,21 @@ footer ul li a:hover {
   }
   .footer-text {
     display: none;
+  }
+  .button-container {
+    flex-direction: column;
+  }
+  .button {
+    padding: 10px;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 950px) {
+  #intro-container {
+    flex-direction: column;
+  }
+  #intro-right {
+    text-align: center;
   }
 }/*# sourceMappingURL=style.css.map */

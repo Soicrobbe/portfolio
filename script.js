@@ -21,3 +21,20 @@ function toggleBurger() {
         icon.innerHTML = "&#9776;"
     }    
 }
+
+const header = document.querySelector('header');
+const headerButton = document.querySelectorAll('.button.header')
+
+window.addEventListener('scroll', () => {
+    if(this.scrollY > 50) {
+        header.classList.add('shadow');
+        for(let i=0; i<headerButton.length; i++) {
+            headerButton[i].classList.add('shadow');
+        }
+    } else {
+        header.classList.remove('shadow');
+        for(let i=0; i<headerButton.length; i++) {
+            headerButton[i].classList.remove('shadow');
+        }
+    }
+})
