@@ -25,13 +25,22 @@
 }
 
 h1 {
-    margin-top: 60px;
-    margin-bottom: 60px;
-    font-size: 60px;
+    // margin-top: 60px;
+    margin-bottom: 20px;
+    font-size: 50px;
 }
 
 h2 {
-    margin: 25px;
+    margin: 50px 25px 50px 25px;
+    font-size: 30px;
+}
+
+h3 {
+    margin: 15px;
+}
+
+h4 {
+    margin: 15px;
 }
 
 html {
@@ -58,15 +67,17 @@ ul {
 
 section {
     padding: 60px 20px;
-    // margin: auto;
     margin-right: auto;
     margin-left: auto;
-    // margin-top: 50px;
     margin-top: auto;
     margin-bottom: 150px;
-    max-width: 75%;
+    max-width: 80%;
     text-align: center;
+    min-height: 500px;
+    /* height: 100vh; */
 }
+
+#home { height: 100vh;}
 
 header {
     background-color: #eceef1;
@@ -228,23 +239,32 @@ footer ul li a:hover {
     flex-direction: row;
     align-items: center;
     gap: 10%;
+    height: 100%;
+    width:100%;
 }
 
 #intro-left {
     flex: 1;
+    max-width: 35%;
 }
 
 #intro-right {
     flex: 1;
     float: right;
     text-align: right;
+    background-color: var(--bg-color);
+    padding: 50px;
+    font-size: 18px;
+    border-radius: 20px;
+    max-width: 55%;
+    box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15), -7px -7px 20px rgb(255, 255, 255), 0px 0px 4px rgba(255, 255, 255, 0.2) !important;
 }
 
 #robbeimg {
     border-radius: 50%;
     max-width: 85%;
     height: auto;
-    
+    box-shadow: 7px 7px 15px rgba(39, 60, 122, 0.39), -7px -7px 20px rgb(255, 255, 255), 0px 0px 4px rgba(255, 255, 255, 0.2) !important;
 }
 
 // Forms
@@ -261,10 +281,20 @@ footer ul li a:hover {
     width: 100;
 }
 
+#projects-foot {
+    display: flex;
+    justify-content: center;
+    margin: 50px auto auto auto;
+    width: 20%;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15), -7px -7px 20px rgb(255, 255, 255), 0px 0px 4px rgba(255, 255, 255, 0.2) !important;
+}
+
 .project {
     flex: 1;
     background-color: var(--bg-color);
-    padding: 20px;
+    padding: 0px 25px 25px 25px;
     width: 100%;
     margin-top: 10px;
     margin-bottom: 0px;
@@ -290,6 +320,8 @@ footer ul li a:hover {
     width: 100%;
     flex-wrap: wrap;
     flex-direction: row;
+    margin-top: 10px;
+    margin-bottom: 50px;
 }
 
 .resume-entry {
@@ -297,16 +329,31 @@ footer ul li a:hover {
     padding: 20px;
     width: 100%;
     margin-top: 10px;
-    margin-bottom: 0px;
+    margin-bottom: 10px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 20px;
     display:flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
     box-shadow: 7px 7px 15px rgba(55, 84, 170, .15),
     -7px -7px 20px rgba(255, 255, 255, 1),
     0px 0px 4px rgba(255, 255, 255, .2) !important;
+}
+
+.resume-entry .company {
+    text-align:left;
+    width:33%;
+}
+
+.resume-entry .role {
+    width: 33%;
+}
+
+.resume-entry .job-info {
+    text-align: right;
+    width: 33%;
 }
 
 // Buttons
